@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Ex apps
+    'django_extensions',    # Use `shell_plus`
+
     # My Apps
     'blog.apps.BlogConfig',
 ]
@@ -123,3 +126,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# This tells shell_plus to use IPython
+SHELL_PLUS = "ipython"
