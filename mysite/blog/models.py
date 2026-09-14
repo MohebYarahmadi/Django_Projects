@@ -3,6 +3,13 @@ from django.db import models
 from django.utils import timezone
 
 
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return (
+            super().get_queryset().filter(status=Post.Status.PUBLISHED)
+        )
+
+
 class Post(models.Model):
     class Status(models.TextChoices):
         # Enumeration class
@@ -24,6 +31,10 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name='blog_posts'
     )
+
+    # Managers
+    objects = models.Manager()  # the default manager
+    published = PublishedManager()  # Our custom manager
 
     class Meta:
         ordering = ['-published_at']
