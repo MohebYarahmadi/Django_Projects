@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 
@@ -18,7 +19,7 @@ class Post(models.Model):
         ARCHIVED = 'AR', 'Archived'
 
     title = models.CharField(max_length=250)
-    slug = models.CharField(max_length=250)
+    slug = models.CharField(max_length=250, unique_for_date='published_at')
     body = models.TextField()
     published_at = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -41,6 +42,17 @@ class Post(models.Model):
         indexes = [
             models.Index(fields=['-published_at']),
         ]
+
+    def get_absolute_url(self):
+        return reverse(
+            'blog:post-detail',
+            args=[
+                self.published_at.year,
+                self.published_at.month,
+                self.published_at.day,
+                self.slug
+            ]
+        )
 
     def __str__(self):
         return self.title
