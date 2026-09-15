@@ -56,3 +56,24 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Comment(models.Model):
+    name = models.CharField(max_length=88)
+    email = models.EmailField()
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_verified = models.BooleanField(default=True)
+
+    # Relations
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+
+    class Meta:
+        ordering = ['created_at']
+        indexes = [
+            models.Index(fields=['created_at']),
+        ]
+
+    def __str__(self):
+        return f'comment by {self.name} on {self.post}'
