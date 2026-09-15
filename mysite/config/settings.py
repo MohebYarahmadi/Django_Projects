@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Ex apps
+    'taggit',
     'django_extensions',    # Use `shell_plus`
 
     # My Apps
