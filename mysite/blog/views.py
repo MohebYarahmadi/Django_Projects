@@ -1,6 +1,11 @@
 from django.views.generic import ListView
-
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.contrib.postgres.search import (
+    SearchVector, SearchQuery, SearchRank
+)
+from django.core.paginator import (
+    EmptyPage, PageNotAnInteger, Paginator
+)
+from django.contrib.postgres.search import TrigramSimilarity
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.core.mail import send_mail
@@ -9,7 +14,9 @@ from django.db.models import Count
 from taggit.models import Tag
 
 from .models import Post
-from .forms import EmailPostForm, CommentForm
+from .forms import (
+    EmailPostForm, CommentForm, SearchForm
+)
 
 
 def post_list(request, tag_slug=None):
@@ -106,6 +113,38 @@ def post_share(request, post_id):
     }
 
     return render(request, 'blog/post/share.html', context=context)
+
+def post_search(request):
+    template_name = 'blog/post/search.html'
+    form = SearchForm()
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            # search_vector = SearchVector(
+                # refer to the numbers 0.1, 0.2, 0.4, and 1.0. (ex: A=1.0 B=0.4)
+                # 'title', weight='A') + SearchVector('body', weight='B')
+            # search_vector = SearchVector('title', 'body', config='spanish')   # different language
+            # search_query = SearchQuery(query)
+            # search_query = SearchQuery(query, config='spanish')    # different language
+            results = (
+                Post.published.annotate(
+                    similarity=TrigramSimilarity('title', query)
+                )
+                .filter(similarity__gt=0.1)
+                .order_by('-similarity')
+            )
+
+    context = {
+        'form': form,
+        'query': query,
+        'results': results,
+    }
+
+    return render(request, template_name, context=context)
 
 @require_POST
 def post_comment(request, post_id):

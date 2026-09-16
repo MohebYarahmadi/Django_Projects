@@ -1,0 +1,1950 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 7,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 7,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 7,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 7,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 8,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 8,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 8,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 8,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 9,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 9,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 9,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 9,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 10,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 10,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 10,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 10,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 11,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 11,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 11,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 11,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$eJCbV1Jv4TqXa1aG2vpHfz$8MS4+wgzWfgZKPzxZlaurNJZ+jCbWVYucdrHElmOAEk=",
+    "last_login": "2026-09-16T07:43:54.315Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-16T07:43:37.261Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "blog",
+    "model": "comment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ggd90bnv6gjhcmth7wmm8vxeqbe571ox",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyEL4dH16N1vILBLpWogKe3J-O9K0oNeZybzEiHuWwl7z2tYWJyFEqdfliI9ch2C77HemqRWt3VJciTysF1eG-fn5Wj_BiX2MrazVsYiICMaC5NPX2KMVWCQAD3wTOQjZGbDhIQeHWVwWk8alHLi_QGzbDa4:1x6kJ8:SNjloHCUjIL-RU_vCcEeFGOaOKSxMdURMs1IquEwpkY",
+    "expire_date": "2026-09-30T07:43:54.327Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "python",
+    "slug": "python"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "orm",
+    "slug": "orm"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "views",
+    "slug": "views"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "models",
+    "slug": "models"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "testing",
+    "slug": "testing"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "deploy",
+    "slug": "deploy"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "api",
+    "slug": "api"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "security",
+    "slug": "security"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "caching",
+    "slug": "caching"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 27
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 17,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 18,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 19,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 27
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 20,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 21,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 22,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 23,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 24,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 25,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 28
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 26,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 27,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 28,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 29,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 30,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 31,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 28
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 32,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 33,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 34,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 35,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 36,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 37,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 29
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 38,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 39,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 40,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 41,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 42,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 43,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 29
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 44,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 45,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 46,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 47,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 48,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 49,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 30
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 50,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 51,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 52,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 15
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 53,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 54,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 55,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 30
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 56,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 57,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 58,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 15
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 59,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 60,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Exploring Django ORM",
+    "slug": "exploring-django-orm-01",
+    "body": "Django ORM is a powerful abstraction over SQL...",
+    "published_at": "2026-08-17T07:49:24Z",
+    "created_at": "2026-08-17T07:49:24Z",
+    "updated_at": "2026-08-17T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Understanding QuerySets",
+    "slug": "understanding-querysets-02",
+    "body": "QuerySets are lazy and chainable...",
+    "published_at": "2026-08-18T07:49:24Z",
+    "created_at": "2026-08-18T07:49:24Z",
+    "updated_at": "2026-08-18T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Migrations Deep Dive",
+    "slug": "migrations-deep-dive-03",
+    "body": "Migrations track changes to your models...",
+    "published_at": "2026-08-19T07:49:24Z",
+    "created_at": "2026-08-19T07:49:24Z",
+    "updated_at": "2026-08-19T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Signals in Django",
+    "slug": "signals-in-django-04",
+    "body": "Signals let decoupled apps get notified...",
+    "published_at": "2026-08-20T07:49:24Z",
+    "created_at": "2026-08-20T07:49:24Z",
+    "updated_at": "2026-08-20T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Custom Managers",
+    "slug": "custom-managers-05",
+    "body": "Custom managers encapsulate query logic...",
+    "published_at": "2026-08-21T07:49:24Z",
+    "created_at": "2026-08-21T07:49:24Z",
+    "updated_at": "2026-08-21T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "Middleware Explained",
+    "slug": "middleware-explained-06",
+    "body": "Middleware processes requests and responses...",
+    "published_at": "2026-08-22T07:49:24Z",
+    "created_at": "2026-08-22T07:49:24Z",
+    "updated_at": "2026-08-22T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Forms and Validation",
+    "slug": "forms-and-validation-07",
+    "body": "Django forms handle rendering and validation...",
+    "published_at": "2026-08-23T07:49:24Z",
+    "created_at": "2026-08-23T07:49:24Z",
+    "updated_at": "2026-08-23T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 8,
+  "fields": {
+    "title": "Class-Based Views",
+    "slug": "class-based-views-08",
+    "body": "CBVs provide reusable view behavior...",
+    "published_at": "2026-08-24T07:49:24Z",
+    "created_at": "2026-08-24T07:49:24Z",
+    "updated_at": "2026-08-24T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "title": "Function-Based Views",
+    "slug": "function-based-views-09",
+    "body": "FBVs are simple and explicit...",
+    "published_at": "2026-08-25T07:49:24Z",
+    "created_at": "2026-08-25T07:49:24Z",
+    "updated_at": "2026-08-25T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 10,
+  "fields": {
+    "title": "Template Inheritance",
+    "slug": "template-inheritance-10",
+    "body": "Templates can extend a base template...",
+    "published_at": "2026-08-26T07:49:24Z",
+    "created_at": "2026-08-26T07:49:24Z",
+    "updated_at": "2026-08-26T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 11,
+  "fields": {
+    "title": "Static Files Management",
+    "slug": "static-files-management-11",
+    "body": "collectstatic gathers static assets...",
+    "published_at": "2026-08-27T07:49:24Z",
+    "created_at": "2026-08-27T07:49:24Z",
+    "updated_at": "2026-08-27T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 12,
+  "fields": {
+    "title": "Media Files Upload",
+    "slug": "media-files-upload-12",
+    "body": "Handling user uploads requires MEDIA settings...",
+    "published_at": "2026-08-28T07:49:24Z",
+    "created_at": "2026-08-28T07:49:24Z",
+    "updated_at": "2026-08-28T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 13,
+  "fields": {
+    "title": "Authentication Basics",
+    "slug": "authentication-basics-13",
+    "body": "Django ships with a robust auth system...",
+    "published_at": "2026-08-29T07:49:24Z",
+    "created_at": "2026-08-29T07:49:24Z",
+    "updated_at": "2026-08-29T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 14,
+  "fields": {
+    "title": "Permissions and Groups",
+    "slug": "permissions-and-groups-14",
+    "body": "Permissions gate access to views...",
+    "published_at": "2026-08-30T07:49:24Z",
+    "created_at": "2026-08-30T07:49:24Z",
+    "updated_at": "2026-08-30T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 15,
+  "fields": {
+    "title": "Caching Strategies",
+    "slug": "caching-strategies-15",
+    "body": "Caching reduces database hits...",
+    "published_at": "2026-08-31T07:49:24Z",
+    "created_at": "2026-08-31T07:49:24Z",
+    "updated_at": "2026-08-31T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 16,
+  "fields": {
+    "title": "Signals vs Overriding Save",
+    "slug": "signals-vs-overriding-save-16",
+    "body": "Choose the right hook for side effects...",
+    "published_at": "2026-09-01T07:49:24Z",
+    "created_at": "2026-09-01T07:49:24Z",
+    "updated_at": "2026-09-01T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 17,
+  "fields": {
+    "title": "Testing Django Apps",
+    "slug": "testing-django-apps-17",
+    "body": "Write tests to catch regressions early...",
+    "published_at": "2026-09-02T07:49:24Z",
+    "created_at": "2026-09-02T07:49:24Z",
+    "updated_at": "2026-09-02T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 18,
+  "fields": {
+    "title": "Fixtures and Factories",
+    "slug": "fixtures-and-factories-18",
+    "body": "Factories generate realistic test data...",
+    "published_at": "2026-09-03T07:49:24Z",
+    "created_at": "2026-09-03T07:49:24Z",
+    "updated_at": "2026-09-03T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 19,
+  "fields": {
+    "title": "Deploying with Gunicorn",
+    "slug": "deploying-with-gunicorn-19",
+    "body": "Gunicorn serves WSGI apps in production...",
+    "published_at": "2026-09-04T07:49:24Z",
+    "created_at": "2026-09-04T07:49:24Z",
+    "updated_at": "2026-09-04T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 20,
+  "fields": {
+    "title": "Nginx as Reverse Proxy",
+    "slug": "nginx-as-reverse-proxy-20",
+    "body": "Nginx handles static files and TLS...",
+    "published_at": "2026-09-05T07:49:24Z",
+    "created_at": "2026-09-05T07:49:24Z",
+    "updated_at": "2026-09-05T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 21,
+  "fields": {
+    "title": "Dockerizing Django",
+    "slug": "dockerizing-django-21",
+    "body": "Containerize your app for consistency...",
+    "published_at": "2026-09-06T07:49:24Z",
+    "created_at": "2026-09-06T07:49:24Z",
+    "updated_at": "2026-09-06T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 22,
+  "fields": {
+    "title": "Environment Variables",
+    "slug": "environment-variables-22",
+    "body": "Keep secrets out of source control...",
+    "published_at": "2026-09-07T07:49:24Z",
+    "created_at": "2026-09-07T07:49:24Z",
+    "updated_at": "2026-09-07T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 23,
+  "fields": {
+    "title": "Database Indexing",
+    "slug": "database-indexing-23",
+    "body": "Indexes speed up lookups but slow writes...",
+    "published_at": "2026-09-08T07:49:24Z",
+    "created_at": "2026-09-08T07:49:24Z",
+    "updated_at": "2026-09-08T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 24,
+  "fields": {
+    "title": "N+1 Query Problem",
+    "slug": "nplus1-query-problem-24",
+    "body": "select_related and prefetch_related fix N+1...",
+    "published_at": "2026-09-09T07:49:24Z",
+    "created_at": "2026-09-09T07:49:24Z",
+    "updated_at": "2026-09-09T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 25,
+  "fields": {
+    "title": "Pagination Techniques",
+    "slug": "pagination-techniques-25",
+    "body": "Paginator splits large querysets...",
+    "published_at": "2026-09-10T07:49:24Z",
+    "created_at": "2026-09-10T07:49:24Z",
+    "updated_at": "2026-09-10T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 26,
+  "fields": {
+    "title": "REST Framework Intro",
+    "slug": "rest-framework-intro-26",
+    "body": "DRF serializes models to JSON...",
+    "published_at": "2026-09-11T07:49:24Z",
+    "created_at": "2026-09-11T07:49:24Z",
+    "updated_at": "2026-09-11T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 27,
+  "fields": {
+    "title": "Serializers Deep Dive",
+    "slug": "serializers-deep-dive-27",
+    "body": "Serializers validate and transform data...",
+    "published_at": "2026-09-12T07:49:24Z",
+    "created_at": "2026-09-12T07:49:24Z",
+    "updated_at": "2026-09-12T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 28,
+  "fields": {
+    "title": "ViewSets and Routers",
+    "slug": "viewsets-and-routers-28",
+    "body": "ViewSets combine CRUD into one class...",
+    "published_at": "2026-09-13T07:49:24Z",
+    "created_at": "2026-09-13T07:49:24Z",
+    "updated_at": "2026-09-13T07:49:24Z",
+    "status": "AR",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 29,
+  "fields": {
+    "title": "JWT Authentication",
+    "slug": "jwt-authentication-29",
+    "body": "JWTs are stateless auth tokens...",
+    "published_at": "2026-09-14T07:49:24Z",
+    "created_at": "2026-09-14T07:49:24Z",
+    "updated_at": "2026-09-14T07:49:24Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 30,
+  "fields": {
+    "title": "API Throttling",
+    "slug": "api-throttling-30",
+    "body": "Throttling protects your API from abuse...",
+    "published_at": "2026-09-15T07:49:24Z",
+    "created_at": "2026-09-15T07:49:24Z",
+    "updated_at": "2026-09-15T07:49:24Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "name": "Commenter 1",
+    "email": "commenter1@example.com",
+    "body": "Great post #1! Learned a lot about Exploring Django ORM.",
+    "created_at": "2026-08-17T07:51:03Z",
+    "updated_at": "2026-08-17T07:51:03Z",
+    "is_verified": true,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "name": "Commenter 2",
+    "email": "commenter2@example.com",
+    "body": "Great post #2! Learned a lot about Understanding QuerySets.",
+    "created_at": "2026-08-18T07:51:03Z",
+    "updated_at": "2026-08-18T07:51:03Z",
+    "is_verified": true,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "name": "Commenter 3",
+    "email": "commenter3@example.com",
+    "body": "Great post #3! Learned a lot about Migrations Deep Dive.",
+    "created_at": "2026-08-19T07:51:03Z",
+    "updated_at": "2026-08-19T07:51:03Z",
+    "is_verified": true,
+    "post": 3
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 4,
+  "fields": {
+    "name": "Commenter 4",
+    "email": "commenter4@example.com",
+    "body": "Great post #4! Learned a lot about Signals in Django.",
+    "created_at": "2026-08-20T07:51:03Z",
+    "updated_at": "2026-08-20T07:51:03Z",
+    "is_verified": true,
+    "post": 4
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 5,
+  "fields": {
+    "name": "Commenter 5",
+    "email": "commenter5@example.com",
+    "body": "Great post #5! Learned a lot about Custom Managers.",
+    "created_at": "2026-08-21T07:51:03Z",
+    "updated_at": "2026-08-21T07:51:03Z",
+    "is_verified": true,
+    "post": 5
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 6,
+  "fields": {
+    "name": "Commenter 6",
+    "email": "commenter6@example.com",
+    "body": "Great post #6! Learned a lot about Middleware Explained.",
+    "created_at": "2026-08-22T07:51:03Z",
+    "updated_at": "2026-08-22T07:51:03Z",
+    "is_verified": true,
+    "post": 6
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 7,
+  "fields": {
+    "name": "Commenter 7",
+    "email": "commenter7@example.com",
+    "body": "Great post #7! Learned a lot about Forms and Validation.",
+    "created_at": "2026-08-23T07:51:03Z",
+    "updated_at": "2026-08-23T07:51:03Z",
+    "is_verified": true,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 8,
+  "fields": {
+    "name": "Commenter 8",
+    "email": "commenter8@example.com",
+    "body": "Great post #8! Learned a lot about Class-Based Views.",
+    "created_at": "2026-08-24T07:51:03Z",
+    "updated_at": "2026-08-24T07:51:03Z",
+    "is_verified": true,
+    "post": 8
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 9,
+  "fields": {
+    "name": "Commenter 9",
+    "email": "commenter9@example.com",
+    "body": "Great post #9! Learned a lot about Function-Based Views.",
+    "created_at": "2026-08-25T07:51:03Z",
+    "updated_at": "2026-08-25T07:51:03Z",
+    "is_verified": true,
+    "post": 9
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 10,
+  "fields": {
+    "name": "Commenter 10",
+    "email": "commenter10@example.com",
+    "body": "Great post #10! Learned a lot about Template Inheritance.",
+    "created_at": "2026-08-26T07:51:03Z",
+    "updated_at": "2026-08-26T07:51:03Z",
+    "is_verified": true,
+    "post": 10
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 11,
+  "fields": {
+    "name": "Commenter 11",
+    "email": "commenter11@example.com",
+    "body": "Great post #11! Learned a lot about Static Files Management.",
+    "created_at": "2026-08-27T07:51:03Z",
+    "updated_at": "2026-08-27T07:51:03Z",
+    "is_verified": true,
+    "post": 11
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 12,
+  "fields": {
+    "name": "Commenter 12",
+    "email": "commenter12@example.com",
+    "body": "Great post #12! Learned a lot about Media Files Upload.",
+    "created_at": "2026-08-28T07:51:03Z",
+    "updated_at": "2026-08-28T07:51:03Z",
+    "is_verified": true,
+    "post": 12
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 13,
+  "fields": {
+    "name": "Commenter 13",
+    "email": "commenter13@example.com",
+    "body": "Great post #13! Learned a lot about Authentication Basics.",
+    "created_at": "2026-08-29T07:51:03Z",
+    "updated_at": "2026-08-29T07:51:03Z",
+    "is_verified": true,
+    "post": 13
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 14,
+  "fields": {
+    "name": "Commenter 14",
+    "email": "commenter14@example.com",
+    "body": "Great post #14! Learned a lot about Permissions and Groups.",
+    "created_at": "2026-08-30T07:51:03Z",
+    "updated_at": "2026-08-30T07:51:03Z",
+    "is_verified": true,
+    "post": 14
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 15,
+  "fields": {
+    "name": "Commenter 15",
+    "email": "commenter15@example.com",
+    "body": "Great post #15! Learned a lot about Caching Strategies.",
+    "created_at": "2026-08-31T07:51:03Z",
+    "updated_at": "2026-08-31T07:51:03Z",
+    "is_verified": true,
+    "post": 15
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 16,
+  "fields": {
+    "name": "Commenter 16",
+    "email": "commenter16@example.com",
+    "body": "Great post #16! Learned a lot about Signals vs Overriding Save.",
+    "created_at": "2026-09-01T07:51:03Z",
+    "updated_at": "2026-09-01T07:51:03Z",
+    "is_verified": true,
+    "post": 16
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 17,
+  "fields": {
+    "name": "Commenter 17",
+    "email": "commenter17@example.com",
+    "body": "Great post #17! Learned a lot about Testing Django Apps.",
+    "created_at": "2026-09-02T07:51:03Z",
+    "updated_at": "2026-09-02T07:51:03Z",
+    "is_verified": true,
+    "post": 17
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 18,
+  "fields": {
+    "name": "Commenter 18",
+    "email": "commenter18@example.com",
+    "body": "Great post #18! Learned a lot about Fixtures and Factories.",
+    "created_at": "2026-09-03T07:51:03Z",
+    "updated_at": "2026-09-03T07:51:03Z",
+    "is_verified": true,
+    "post": 18
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 19,
+  "fields": {
+    "name": "Commenter 19",
+    "email": "commenter19@example.com",
+    "body": "Great post #19! Learned a lot about Deploying with Gunicorn.",
+    "created_at": "2026-09-04T07:51:03Z",
+    "updated_at": "2026-09-04T07:51:03Z",
+    "is_verified": true,
+    "post": 19
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 20,
+  "fields": {
+    "name": "Commenter 20",
+    "email": "commenter20@example.com",
+    "body": "Great post #20! Learned a lot about Nginx as Reverse Proxy.",
+    "created_at": "2026-09-05T07:51:03Z",
+    "updated_at": "2026-09-05T07:51:03Z",
+    "is_verified": true,
+    "post": 20
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 21,
+  "fields": {
+    "name": "Commenter 21",
+    "email": "commenter21@example.com",
+    "body": "Great post #21! Learned a lot about Dockerizing Django.",
+    "created_at": "2026-09-06T07:51:03Z",
+    "updated_at": "2026-09-06T07:51:03Z",
+    "is_verified": true,
+    "post": 21
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 22,
+  "fields": {
+    "name": "Commenter 22",
+    "email": "commenter22@example.com",
+    "body": "Great post #22! Learned a lot about Environment Variables.",
+    "created_at": "2026-09-07T07:51:03Z",
+    "updated_at": "2026-09-07T07:51:03Z",
+    "is_verified": true,
+    "post": 22
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 23,
+  "fields": {
+    "name": "Commenter 23",
+    "email": "commenter23@example.com",
+    "body": "Great post #23! Learned a lot about Database Indexing.",
+    "created_at": "2026-09-08T07:51:03Z",
+    "updated_at": "2026-09-08T07:51:03Z",
+    "is_verified": true,
+    "post": 23
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 24,
+  "fields": {
+    "name": "Commenter 24",
+    "email": "commenter24@example.com",
+    "body": "Great post #24! Learned a lot about N+1 Query Problem.",
+    "created_at": "2026-09-09T07:51:03Z",
+    "updated_at": "2026-09-09T07:51:03Z",
+    "is_verified": true,
+    "post": 24
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 25,
+  "fields": {
+    "name": "Commenter 25",
+    "email": "commenter25@example.com",
+    "body": "Great post #25! Learned a lot about Pagination Techniques.",
+    "created_at": "2026-09-10T07:51:03Z",
+    "updated_at": "2026-09-10T07:51:03Z",
+    "is_verified": true,
+    "post": 25
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 26,
+  "fields": {
+    "name": "Commenter 26",
+    "email": "commenter26@example.com",
+    "body": "Great post #26! Learned a lot about REST Framework Intro.",
+    "created_at": "2026-09-11T07:51:03Z",
+    "updated_at": "2026-09-11T07:51:03Z",
+    "is_verified": true,
+    "post": 26
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 27,
+  "fields": {
+    "name": "Commenter 27",
+    "email": "commenter27@example.com",
+    "body": "Great post #27! Learned a lot about Serializers Deep Dive.",
+    "created_at": "2026-09-12T07:51:03Z",
+    "updated_at": "2026-09-12T07:51:03Z",
+    "is_verified": true,
+    "post": 27
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 28,
+  "fields": {
+    "name": "Commenter 28",
+    "email": "commenter28@example.com",
+    "body": "Great post #28! Learned a lot about ViewSets and Routers.",
+    "created_at": "2026-09-13T07:51:03Z",
+    "updated_at": "2026-09-13T07:51:03Z",
+    "is_verified": true,
+    "post": 28
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 29,
+  "fields": {
+    "name": "Commenter 29",
+    "email": "commenter29@example.com",
+    "body": "Great post #29! Learned a lot about JWT Authentication.",
+    "created_at": "2026-09-14T07:51:03Z",
+    "updated_at": "2026-09-14T07:51:03Z",
+    "is_verified": true,
+    "post": 29
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 30,
+  "fields": {
+    "name": "Commenter 30",
+    "email": "commenter30@example.com",
+    "body": "Great post #30! Learned a lot about API Throttling.",
+    "created_at": "2026-09-15T07:51:03Z",
+    "updated_at": "2026-09-15T07:51:03Z",
+    "is_verified": true,
+    "post": 30
+  }
+}
+]
