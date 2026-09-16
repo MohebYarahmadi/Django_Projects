@@ -11,7 +11,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ['author']
     date_hierarchy = 'published_at'
-    ordering = ['status', 'published_at']
+    ordering = ['-published_at', 'status']
     show_facets = admin.ShowFacets.ALWAYS
 
 
@@ -20,4 +20,3 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'post', 'is_verified', 'created_at']
     list_filter = ['is_verified', 'created_at', 'updated_at']
     search_fields = ['name', 'email', 'body']
-    
