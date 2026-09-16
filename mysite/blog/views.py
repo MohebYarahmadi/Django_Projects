@@ -123,7 +123,9 @@ def post_search(request):
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
-            search_vector = SearchVector('title', 'body')
+            search_vector = SearchVector(
+                # refer to the numbers 0.1, 0.2, 0.4, and 1.0. (ex: A=1.0 B=0.4)
+                'title', weight='A') + SearchVector('body', weight='B')
             # search_vector = SearchVector('title', 'body', config='spanish')   # different language
             search_query = SearchQuery(query)
             # search_query = SearchQuery(query, config='spanish')    # different language
@@ -132,7 +134,7 @@ def post_search(request):
                     search=search_vector,
                     rank=SearchRank(search_vector, search_query)
                 )
-                .filter(search=search_query)
+                .filter(rank__gte=0.3)
                 .order_by('-rank')
             )
 
