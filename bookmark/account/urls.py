@@ -30,4 +30,7 @@ urlpatterns = [
 
     # Register by our custom UserRegistrationForm
     path('register/', views.register, name='register'),
+
+    # Edit Profile
+    path('edit/', views.edit, name='edit'),
 ]
