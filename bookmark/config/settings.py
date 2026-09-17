@@ -122,3 +122,6 @@ SHELL_PLUS = "ipython"
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# Development SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
