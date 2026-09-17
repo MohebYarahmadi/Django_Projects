@@ -27,4 +27,7 @@ urlpatterns = [
 
     # Dashboard url
     path('', views.dashboard, name='dashboard'),
+
+    # Register by our custom UserRegistrationForm
+    path('register/', views.register, name='register'),
 ]
