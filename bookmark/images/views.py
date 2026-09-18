@@ -1,0 +1,45 @@
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render, get_object_or_404
+
+from .models import Image
+from .forms import ImageCreateForm
+
+
+@login_required
+def image_create(request):
+    template_name = 'images/image/create.html'
+
+    if request.method == 'POST':
+        # form is sent
+        form = ImageCreateForm(data=request.POST)
+        if form.is_valid():
+            # from data is valid
+            cd = form.cleaned_data
+            new_image = form.save(commit=False)
+            # assign current user to the item
+            new_image.user = request.user
+            new_image.save()
+            messages.success(request, 'Image added successfully')
+            # redirect to new created item detail view
+            return redirect(new_image.get_absolute_url())
+    else:
+        # build form with data provided by the bookmarklet via GET
+        form = ImageCreateForm(data=request.GET)
+
+    context = {
+        'form': form,
+        'section': 'image',
+    }
+
+    return render(request, template_name, context=context)
+
+
+def image_detail(request, id, slug):
+    template_name = 'images/image/detail.html'
+    image = get_object_or_404(Image, id=id, slug=slug)
+    context = {
+        'image': image,
+        'section': 'images',
+    }
+    return render(request, template_name, context=context)
