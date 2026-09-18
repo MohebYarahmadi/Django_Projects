@@ -80,6 +80,7 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 # Password validation
@@ -136,3 +137,7 @@ LOGOUT_URL = 'logout'
 
 # Development SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Social OAuth2 - Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('GOOGLE_OAUTH2_SECRET')
