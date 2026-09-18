@@ -1,13 +1,14 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 
+from .models import Image
 from .forms import ImageCreateForm
 
 
 @login_required
 def image_create(request):
-    template_name = 'images/create.html'
+    template_name = 'images/image/create.html'
 
     if request.method == 'POST':
         # form is sent
@@ -31,4 +32,14 @@ def image_create(request):
         'section': 'image',
     }
 
+    return render(request, template_name, context=context)
+
+
+def image_detail(request, id, slug):
+    template_name = 'images/image/detail.html'
+    image = get_object_or_404(Image, id=id, slug=slug)
+    context = {
+        'image': image,
+        'section': 'images',
+    }
     return render(request, template_name, context=context)
