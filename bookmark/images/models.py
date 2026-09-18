@@ -12,7 +12,10 @@ class Image(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     # Relations
+    # The owner of the uploaded image
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='images_created')
+    # Who likes it
+    users_like = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='images_liked')
 
     class Meta:
         indexes = [
