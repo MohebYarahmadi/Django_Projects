@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Ex apps
     'social_django',
     'django_extensions',    # Use `shell_plus` and `runserver_plus`
+    'easy_thumbnails',
 
     # Our apps
     'images.apps.ImagesConfig',
