@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth.decorator import login_required
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 
 from .forms import ImageCreateForm
@@ -7,11 +7,11 @@ from .forms import ImageCreateForm
 
 @login_required
 def image_create(request):
-    template_name = 'images/image/create.html'
+    template_name = 'images/create.html'
 
     if request.method == 'POST':
         # form is sent
-        from = ImageCreateForm(data=request.POST)
+        form = ImageCreateForm(data=request.POST)
         if form.is_valid():
             # from data is valid
             cd = form.cleaned_data
@@ -19,7 +19,7 @@ def image_create(request):
             # assign current user to the item
             new_image.user = request.user
             new_image.save()
-            message.success(request, 'Image added successfully')
+            messages.success(request, 'Image added successfully')
             # redirect to new created item detail view
             return redirect(new_image.get_absolute_url())
     else:
