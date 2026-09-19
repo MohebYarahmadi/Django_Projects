@@ -11,3 +11,22 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'Profile of {self.user.username}'
+
+
+class Contact(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    # Relations
+    user_form = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rel_from_set')
+    user_to = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rel_to_set')
+
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['-created_at']),
+        ]
+        ordering = ['-created_at']
+
+
+    def __str__(self):
+        return f'{self.user_form} follows {self.user_to}'
