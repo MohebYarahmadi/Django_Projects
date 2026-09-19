@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     # Our apps
     'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
