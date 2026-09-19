@@ -5,6 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.http import require_POST
 from django.shortcuts import render, get_object_or_404
 
+from actions.models import Action
 from actions.utils import create_action
 from .forms import (
     LoginForm,
@@ -94,7 +95,7 @@ def dashboard(request):
     template_name = 'account/dashboard.html'
     # Display all actions by default
     actions = Action.objects.exclude(user=request.user)
-    following_ids = request.user.following.values_list('id', flata=True)
+    following_ids = request.user.following.values_list('id', flat=True)
     if following_ids:
         # If user is followig others, retrieve oly their actions
         actions = actions.filter(user_id__in=following_ids)
