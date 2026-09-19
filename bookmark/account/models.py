@@ -18,7 +18,7 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     # Relations
-    user_form = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rel_from_set')
+    user_from = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rel_from_set')
     user_to = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rel_to_set')
 
 
