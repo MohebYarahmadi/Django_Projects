@@ -19,7 +19,7 @@ User = get_user_model()
 @login_required
 def user_list(request):
     template_name = 'account/user/list.html'
-    users = User.objects.filter(is_active)
+    users = User.objects.filter(is_active=True)
     context = {
         'users': users,
         'section': 'people',
