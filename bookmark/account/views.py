@@ -91,7 +91,20 @@ def register(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+    template_name = 'account/dashboard.html'
+    # Display all actions by default
+    actions = Action.objects.exclude(user=request.user)
+    following_ids = request.user.following.values_list('id', flata=True)
+    if following_ids:
+        # If user is followig others, retrieve oly their actions
+        actions = actions.filter(user_id__in=following_ids)
+    actions = actions[:10]
+
+    context = {
+        'actions': actions,
+        'section': 'dashboard',
+    }
+    return render(request, template_name, context=context)
 
 
 @login_required
