@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Action(models.Model):
-    verb = models.CharField(max_lenght=225)
+    verb = models.CharField(max_length=225)
     created_at = models.DateTimeField(auto_now_add=True)
 
     # Relations
