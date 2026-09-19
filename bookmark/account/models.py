@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.conf import settings
 
@@ -30,3 +31,12 @@ class Contact(models.Model):
 
     def __str__(self):
         return f'{self.user_form} follows {self.user_to}'
+
+
+
+
+# Add the following field to User dynamically
+user_model = get_user_model()
+user_model.add_to_class(
+    'following', models.ManyToManyField('self', through=Contact, symmetrical=False, related_name='followers')
+)
