@@ -1,0 +1,13 @@
+Django==5.2.6
+asgiref
+sqlparse
+Pillow
+flower
+celery
+stripe
+python-decouple
+WeasyPrint
+redis
+django-rosetta
+django-parler
+django-localflavor
