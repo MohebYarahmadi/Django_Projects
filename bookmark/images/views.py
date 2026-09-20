@@ -94,6 +94,8 @@ def image_detail(request, id, slug):
     image = get_object_or_404(Image, id=id, slug=slug)
     # Increment total image views by 1
     total_views = r.incr(f'image:{image.id}:views')
+    # Increment image ranking by 1
+    r.zincrby('image_ranking', 1, image.id)
     context = {
         'image': image,
         'section': 'images',
@@ -119,3 +121,19 @@ def image_like(request):
         except Image.DoesNotExist:
             pass
     return JsonResponse( {'status': 'error' })
+
+
+@login_required
+def image_ranking(request):
+    template_name = 'images/image/ranking.html'
+    # Get image ranking dictionary
+    image_ranking = r.zrange('image_ranking', 0, -1, desc=True)[:10]
+    image_ranking_ids = [int(id) for id in image_ranking]
+    # Get most viewed images
+    most_viewed = list(Image.objects.filter(id__in=image_ranking_ids))
+    most_viewed.sort(key=lambda x: image_ranking_ids.index(x.id))
+    context = {
+        'most_viewed': most_viewed,
+        'section': 'images',
+    }
+    return render(request, template_name, context=context)
