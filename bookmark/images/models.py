@@ -32,7 +32,7 @@ class Image(models.Model):
             self.slug = slugify(self.title)
             if not self.slug:                          # <-- safety net
                 self.slug = f'image-{uuid.uuid4().hex[:8]}'
-            super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('images:detail', args=[self.id, self.slug])
