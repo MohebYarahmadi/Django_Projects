@@ -80,8 +80,8 @@ def register(request):
             new_user.set_password(user_form.cleaned_data['password'])   # hashing
             # Save the User object
             new_user.save()
-            # Create the user Profile
-            Profile.objects.create(user=new_user)
+            # Create the user Profile (No signal)
+            # Profile.objects.create(user=new_user)
             create_action(new_user, 'has created an account')
             return render(request, 'account/register-done.html', {'new_user': new_user})
     else:
