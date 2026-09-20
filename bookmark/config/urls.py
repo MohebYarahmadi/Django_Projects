@@ -12,6 +12,9 @@ urlpatterns = [
 
     # Images app
     path('images/', include('images.urls', namespace='images')),
+
+    # Debug Toolbar
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
 
 if settings.DEBUG:

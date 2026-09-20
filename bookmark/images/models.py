@@ -11,6 +11,7 @@ class Image(models.Model):
     url = models.URLField(max_length=2000)
     image = models.ImageField(upload_to='images/%Y/%m/%d/')
     description = models.TextField(blank=True)
+    total_likes = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
     # Relations
@@ -22,6 +23,7 @@ class Image(models.Model):
     class Meta:
         indexes = [
             models.Index(fields=['-created_at']),
+            models.Index(fields=['-total_likes']),
         ]
         ordering = ['-created_at']
 
@@ -30,7 +32,7 @@ class Image(models.Model):
             self.slug = slugify(self.title)
             if not self.slug:                          # <-- safety net
                 self.slug = f'image-{uuid.uuid4().hex[:8]}'
-            super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('images:detail', args=[self.id, self.slug])
