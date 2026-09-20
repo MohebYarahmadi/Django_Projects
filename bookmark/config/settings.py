@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'social_django',
     'django_extensions',    # Use `shell_plus` and `runserver_plus`
     'easy_thumbnails',
+    'debug_toolbar',
 
     # Our apps
     'images.apps.ImagesConfig',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -166,3 +168,8 @@ from django.urls import reverse_lazy
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user-detail', args=[u.username])
 }
+
+# Debug Toolbar
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
