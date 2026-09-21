@@ -15,7 +15,7 @@ def cart_detail(request):
     return render(request, template_name, context=context)
 
 
-@required_POST
+@require_POST
 def cart_add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
