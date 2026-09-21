@@ -1,3 +1,5 @@
+from django.urls import reverse
+
 from django.db import models
 
 
@@ -13,6 +15,9 @@ class Category(models.Model):
         ]
         verbose_name = 'category'
         verbose_name_plural = 'categories'
+
+    def get_absolute_url(self):
+        return reverse('shop:product-list-by-category', args=[self.slug])
 
     def __str__(self):
         return self.name
@@ -40,6 +45,9 @@ class Product(models.Model):
             models.Index(fields=['name']),
             models.Index(fields=['-created_at']),
         ]
+
+    def get_absolute_url(self):
+        return reverse('shop:product-detail', args=[self.id, self.slug])
 
     def __str__(self):
         return self.name
