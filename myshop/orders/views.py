@@ -6,7 +6,7 @@ from .models import OrderItem
 
 
 def order_create(request):
-    template_name = 'orders/order/created.html'
+    template_name = ''
     cart = Cart(request)
     if request.method == 'POST':
         if form.is_valid():
@@ -20,10 +20,12 @@ def order_create(request):
                 )
             # Clear the cart
             cart.clear()
+            template_name = 'orders/order/created.html'
             return render(request, template_name, { 'order': order })
     else:
         form = OrderCreateForm()
 
+    template_name = 'orders/order/create.html'
     context = {
         'cart': cart,
         'form': form,
