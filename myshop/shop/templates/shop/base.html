@@ -19,8 +19,8 @@
                         <a href="{% url "cart:cart-detail" %}">{{ total_items }}</a>
                         item{{ total_items | pluralize }},
                         ${{ cart.get_total_price }}
-                    {% else %}
-                     Your cart is empty.
+                    {% elif not order %}
+                        Your cart is empty
                     {% endif %}
                 {% endwith %}
             </div>
