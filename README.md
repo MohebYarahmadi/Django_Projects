@@ -70,3 +70,9 @@
 - Configure Celery in your project with RabbitMQ as a message broker
 - Send asynchronous notifications to customers using Celery
 - Monitor Celery using Flower
+- Integrate the Stripe payment gateway into your project
+- Process credit card payments with Stripe
+- Handle payment notifications and mark orders as paid
+- Export orders to CSV files
+- Create custom views for the administration site
+- Generate PDF invoices dynamically
