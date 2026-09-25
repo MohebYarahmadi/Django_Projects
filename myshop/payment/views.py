@@ -19,7 +19,7 @@ def payment_process(request):
 
     if request.method == 'POST':
         success_url = request.build_absolute_uri(reverse('payment:completed'))
-        cancel_url = request.build_absolute_uri(reverse('payment:conceled'))
+        cancel_url = request.build_absolute_uri(reverse('payment:canceled'))
         # Stripe checkout session data
         session_data = {
             'mode': 'payment',
