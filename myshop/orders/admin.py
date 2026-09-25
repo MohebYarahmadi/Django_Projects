@@ -1,7 +1,40 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
+import csv
+import datetime
+from django.http import HttpResponse
 
 from .models import Order, OrderItem
+
+
+# ------------------------------ Action ------------------------------------
+def export_to_csv(modeladmin, request, queryset):
+    opts = modeladmin.model._meta
+    content_disposition = f'attachment; filename={opts.verbose_name}.csv'
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = content_disposition
+    writer = csv.writer(response)
+    fields = [
+        field
+        for field in opts.get_fields()
+        if not field.many_to_many and not field.one_to_many
+    ]
+    # Wrtie a first row with header information
+    writer.writerow([field.verbose_name for field in fields])
+    # Write data rows
+    for obj in queryset:
+        data_row = []
+        for field in fields:
+            value = getattr(obj, field.name)
+            if isinstance(value, datetime.datetime):
+                value = value.strftime('%d/%m/%Y')
+            data_row.append(value)
+        writer.writerow(data_row)
+    return response
+
+# How to show in panel
+export_to_csv.short_description = 'Export to CSV'
+# --------------------------------------------------------------------------
 
 
 def order_payment(obj):
@@ -11,7 +44,9 @@ def order_payment(obj):
         return mark_safe(html)
     return ''
 
+# How to show in panel
 order_payment.short_description = 'Stripe payment'
+
 
 
 class OrderItemInline(admin.TabularInline):
@@ -36,3 +71,4 @@ class OrderAdmin(admin.ModelAdmin):
     ]
     list_filter = ['is_paid', 'created_at', 'updated_at']
     inlines = [OrderItemInline]
+    actions = [export_to_csv]
