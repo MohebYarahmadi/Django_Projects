@@ -212,6 +212,7 @@ __marimo__/
 
 # Personal Settings
 bookmark/media
+myshop/static
 
 # drf_spectacular schema
 schema.yml

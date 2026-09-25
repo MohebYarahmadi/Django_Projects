@@ -32,8 +32,6 @@ def export_to_csv(modeladmin, request, queryset):
             data_row.append(value)
         writer.writerow(data_row)
     return response
-
-# How to show in panel
 export_to_csv.short_description = 'Export to CSV'
 # --------------------------------------------------------------------------
 
@@ -44,14 +42,18 @@ def order_payment(obj):
         html = f'<a href="{url}" target="_blank">{obj.stripe_id}</a>'
         return mark_safe(html)
     return ''
-
-# How to show in panel
 order_payment.short_description = 'Stripe payment'
 
 
 def order_detail(obj):
     url = reverse('orders:admin-order-detail', args=[obj.id])
     return mark_safe(f'<a href="{url}">View</a>')
+
+
+def order_pdf(obj):
+    url = reverse('orders:admin-order-pdf', args=[obj.id])
+    return mark_safe(f'<a href="{url}">PDF</a>')
+order_pdf.short_description = 'Invoice'
 
 
 
@@ -75,6 +77,7 @@ class OrderAdmin(admin.ModelAdmin):
         'created_at',
         'updated_at',
         order_detail,
+        order_pdf,
     ]
     list_filter = ['is_paid', 'created_at', 'updated_at']
     inlines = [OrderItemInline]
