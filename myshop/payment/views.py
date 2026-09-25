@@ -4,7 +4,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 
-import stripe_sandbox as payment  # or: import stripe as payment
+import stripe_sandbox as sandbox  # or: import stripe as payment
 from orders.models import Order
 
 
@@ -12,6 +12,9 @@ from orders.models import Order
 # Create the stripe instance
 stripe.api_key = settings.STRIPE_SECRET_KEY
 string.api_version = settings.STRIPE_API_VERSION
+
+sandbox.api_key = settings.STRIPE_SANDBOX_API_KEY
+sandbox.api_base = settings.STRIPE_SANDBOX_API_BASE
 
 
 def payment_process(request):
@@ -52,14 +55,23 @@ def payment_process(request):
         return render(request, 'payment/process.html', locals())
 
 
+def payment_completed(request):
+    return render(request, 'payment/completed.html')
+
+
+def payment_canceled(request):
+    return render(request, 'payment/canceled.html')
+
+
+
 # ------------------------------- Sandbox --------------------------------------
 def create_payment(request):
-    payment.api_key = settings.STRIPE_SANDBOX_API_KEY
-    payment.api_base = settings.STRIPE_SANDBOX_API_BASE
-    success_url = request.build_absolute_uri(reverse('payment:completed'))
-    cancel_url = request.build_absolute_uri(reverse('payment:conceled'))
+    order_id = request.session.get('order_id')
+    order = get_object_or_404(Order, id=order_id)
+    success_url = request.build_absolute_uri(reverse('payment:sandbox-status'))
+    cancel_url = request.build_absolute_uri(reverse('payment:sandbox-status'))
 
-    intent = payment.PaymentIntent.create(
+    intent = sandbox.PaymentIntent.create(
         amount=2500,          # $25.00 (in cents)
         currency="usd",
         description="Order #{}".format(order.id),
@@ -73,18 +85,31 @@ def create_payment(request):
         },
         receipt_email=request.user.email,
     )
+    for item in order.items.all():
+        intent['line_items'].append(
+            {
+                'price_data': {
+                    'unit_amount': int(item.price * Decimal('100')),
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': item.product.name,
+                    },
+                },
+                'quantity': item.quantity,
+            }
+        )
     return JsonResponse({"client_secret": intent.id, "id": intent.id})
 
 
 def confirm_payment(request, intent_id):
-    intent = payment.PaymentIntent.confirm(intent_id)
+    intent = sandbox.PaymentIntent.confirm(intent_id)
     # After confirm, the payment goes to "requires_action" (manual review).
     # Poll / retrieve to check if it was approved on the dashboard.
     return JsonResponse({"status": intent.status})
 
 
 def check_status(request, intent_id):
-    intent = payment.PaymentIntent.retrieve(intent_id)
+    intent = sandbox.PaymentIntent.retrieve(intent_id)
     if intent.status == "succeeded":
         # Fulfill the order
         ...
@@ -98,7 +123,7 @@ def check_status(request, intent_id):
 
 
 def refund(request, intent_id):
-    refund = payment.Refund.create(
+    refund = sandbox.Refund.create(
         payment_intent=intent_id,
         reason="requested_by_customer",
     )
