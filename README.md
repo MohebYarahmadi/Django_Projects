@@ -76,3 +76,9 @@
 - Export orders to CSV files
 - Create custom views for the administration site
 - Generate PDF invoices dynamically
+- Creating a coupon system
+- Applying coupons to the shopping cart
+- Applying coupons to orders
+- Creating coupons for Stripe Checkout
+- Storing products that are usually bought together
+- Building a product recommendation engine with Redis
