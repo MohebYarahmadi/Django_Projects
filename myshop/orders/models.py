@@ -9,6 +9,7 @@ class Order(models.Model):
     city = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    stripe_id = models.CharField(max_length=250, blank=True)
     is_paid = models.BooleanField(default=False)
 
     class Meta:
