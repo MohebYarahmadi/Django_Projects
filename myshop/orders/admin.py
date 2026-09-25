@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
+from django.urls import reverse
 import csv
 import datetime
 from django.http import HttpResponse
@@ -48,6 +49,11 @@ def order_payment(obj):
 order_payment.short_description = 'Stripe payment'
 
 
+def order_detail(obj):
+    url = reverse('orders:admin-order-detail', args=[obj.id])
+    return mark_safe(f'<a href="{url}">View</a>')
+
+
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
@@ -67,7 +73,8 @@ class OrderAdmin(admin.ModelAdmin):
         'is_paid',
         order_payment,
         'created_at',
-        'updated_at'
+        'updated_at',
+        order_detail,
     ]
     list_filter = ['is_paid', 'created_at', 'updated_at']
     inlines = [OrderItemInline]
