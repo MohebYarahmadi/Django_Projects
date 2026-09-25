@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt # prevent csrf token validation
 
 from orders.models import Order
+from .tasks import payment_completed
 
 
 client = stripe.StripeClient(settings.STRIPE_SECRET_KEY)
@@ -33,7 +34,7 @@ def stripe_webhook(request):
 
     if event.type == 'checkout.session.completed':
         session = event.data.object
-        
+
         print("CHECKOUT SESSION:", session.id)
         print("CLIENT REFERENCE:", session.client_reference_id)
         print("PAYMENT STATUS:", session.payment_status)
@@ -49,6 +50,8 @@ def stripe_webhook(request):
             # Store stripe payment ID
             order.stripe_id = session.payment_intent
             order.save()
+            # Launch asynchronous task
+            payment_completed.delay(order.id)
 
     return HttpResponse(status=200)
 
