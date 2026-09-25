@@ -30,7 +30,7 @@ class OrderAdmin(admin.ModelAdmin):
         'postal_code',
         'city',
         'is_paid',
-        'order_payment',
+        order_payment,
         'created_at',
         'updated_at'
     ]

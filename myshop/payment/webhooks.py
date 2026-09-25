@@ -8,7 +8,7 @@ from orders.models import Order
 
 
 client = stripe.StripeClient(settings.STRIPE_SECRET_KEY)
-endpoint_secret = settings.STRIPE_SECRET_KEY
+endpoint_secret = settings.STRIPE_WEBHOOK_SECRET
 
 
 
@@ -16,8 +16,11 @@ endpoint_secret = settings.STRIPE_SECRET_KEY
 @csrf_exempt
 def stripe_webhook(request):
     payload = request.body
-    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    sig_header = request.META.get("HTTP_STRIPE_SIGNATURE")
     event = None
+
+    if not sig_header:
+        return HttpResponse(status=400)
 
     try:
         event = stripe.Webhook.construct_event(payload, sig_header, settings.STRIPE_WEBHOOK_SECRET)
@@ -30,6 +33,12 @@ def stripe_webhook(request):
 
     if event.type == 'checkout.session.completed':
         session = event.data.object
+        
+        print("CHECKOUT SESSION:", session.id)
+        print("CLIENT REFERENCE:", session.client_reference_id)
+        print("PAYMENT STATUS:", session.payment_status)
+        print("MODE:", session.mode)
+
         if session.mode == 'payment' and session.payment_status == 'paid':
             try:
                 order = Order.objects.get(id=session.client_reference_id)
