@@ -19,7 +19,7 @@ class Recommender:
         """
         return f'product:{id}:purchased_with'
 
-    def product_bought(self, products):
+    def products_bought(self, products):
         """
         receives a list of Product objects that have been bought together (same order)
         """
