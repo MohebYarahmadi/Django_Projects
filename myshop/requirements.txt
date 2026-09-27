@@ -12,6 +12,7 @@ click-plugins==1.1.1.2
 click-repl==0.4.0
 cssselect2==0.10.1
 Django==5.2.6
+django-extensions==4.1
 django-localflavor==5.1
 django-parler==2.4
 django-rosetta==0.10.3
