@@ -1,0 +1,652 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Python Programming",
+    "slug": "python-programming"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Web Development",
+    "slug": "web-development"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Data Science",
+    "slug": "data-science"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 4,
+  "fields": {
+    "title": "Database Design",
+    "slug": "database-design"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 5,
+  "fields": {
+    "title": "Machine Learning",
+    "slug": "machine-learning"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 6,
+  "fields": {
+    "title": "Mobile Development",
+    "slug": "mobile-development"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 7,
+  "fields": {
+    "title": "DevOps & Cloud",
+    "slug": "devops-cloud"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 8,
+  "fields": {
+    "title": "Cybersecurity",
+    "slug": "cybersecurity"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 9,
+  "fields": {
+    "title": "UI/UX Design",
+    "slug": "ui-ux-design"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 10,
+  "fields": {
+    "title": "Software Engineering",
+    "slug": "software-engineering"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "title": "Python Fundamentals",
+    "slug": "python-fundamentals",
+    "overview": "Learn the basics of Python programming, including syntax, data types, control flow, functions, and object-oriented programming. Perfect for beginners who want to start their coding journey.",
+    "created_at": "2024-01-15T10:00:00Z",
+    "owner": 1,
+    "subject": 1
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "title": "Advanced Python Techniques",
+    "slug": "advanced-python-techniques",
+    "overview": "Take your Python skills to the next level with decorators, generators, context managers, metaclasses, and asynchronous programming patterns.",
+    "created_at": "2024-01-20T11:30:00Z",
+    "owner": 1,
+    "subject": 1
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "title": "Django Web Development",
+    "slug": "django-web-development",
+    "overview": "Build robust, scalable web applications with Django. Covers models, views, templates, forms, authentication, and deployment best practices.",
+    "created_at": "2024-02-01T09:15:00Z",
+    "owner": 1,
+    "subject": 2
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 4,
+  "fields": {
+    "title": "Modern JavaScript & React",
+    "slug": "modern-javascript-react",
+    "overview": "Master modern JavaScript (ES6+) and build interactive user interfaces with React. Includes hooks, state management, and component architecture.",
+    "created_at": "2024-02-10T14:00:00Z",
+    "owner": 1,
+    "subject": 2
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 5,
+  "fields": {
+    "title": "Data Analysis with Pandas",
+    "slug": "data-analysis-pandas",
+    "overview": "Learn to manipulate, analyze, and visualize data using the Pandas library. Covers DataFrames, Series, merging, grouping, and time series analysis.",
+    "created_at": "2024-02-18T08:45:00Z",
+    "owner": 1,
+    "subject": 3
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 6,
+  "fields": {
+    "title": "Introduction to Machine Learning",
+    "slug": "introduction-machine-learning",
+    "overview": "Understand the core concepts of machine learning, including supervised and unsupervised learning, model evaluation, and popular algorithms.",
+    "created_at": "2024-03-01T12:00:00Z",
+    "owner": 1,
+    "subject": 5
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 7,
+  "fields": {
+    "title": "SQL & Relational Databases",
+    "slug": "sql-relational-databases",
+    "overview": "Master SQL from basic queries to advanced joins, subqueries, indexing, and database normalization. Includes MySQL and PostgreSQL examples.",
+    "created_at": "2024-03-08T10:30:00Z",
+    "owner": 1,
+    "subject": 4
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 8,
+  "fields": {
+    "title": "Flutter Mobile App Development",
+    "slug": "flutter-mobile-app-development",
+    "overview": "Build cross-platform mobile applications with Flutter and Dart. Covers widgets, state management, navigation, and API integration.",
+    "created_at": "2024-03-15T16:20:00Z",
+    "owner": 1,
+    "subject": 6
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 9,
+  "fields": {
+    "title": "Docker & Kubernetes Essentials",
+    "slug": "docker-kubernetes-essentials",
+    "overview": "Learn containerization with Docker and orchestration with Kubernetes. Covers images, containers, pods, services, and CI/CD pipelines.",
+    "created_at": "2024-03-22T13:10:00Z",
+    "owner": 1,
+    "subject": 7
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 10,
+  "fields": {
+    "title": "Ethical Hacking & Penetration Testing",
+    "slug": "ethical-hacking-penetration-testing",
+    "overview": "Explore cybersecurity fundamentals, vulnerability assessment, and ethical hacking techniques used to secure modern systems.",
+    "created_at": "2024-04-01T09:00:00Z",
+    "owner": 1,
+    "subject": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "title": "Getting Started with Python",
+    "description": "Install Python, set up your IDE, and write your first program.",
+    "course": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "title": "Variables and Data Types",
+    "description": "Understand integers, floats, strings, booleans, and type conversion.",
+    "course": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "title": "Control Flow",
+    "description": "Learn if/else statements, loops, and logical operators.",
+    "course": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "title": "Functions and Modules",
+    "description": "Define functions, use parameters, and organize code into modules.",
+    "course": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 5,
+  "fields": {
+    "title": "Object-Oriented Programming",
+    "description": "Classes, objects, inheritance, and encapsulation in Python.",
+    "course": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 6,
+  "fields": {
+    "title": "Decorators and Closures",
+    "description": "Write reusable code with decorators and understand closures.",
+    "course": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 7,
+  "fields": {
+    "title": "Generators and Iterators",
+    "description": "Master lazy evaluation with generators and custom iterators.",
+    "course": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 8,
+  "fields": {
+    "title": "Context Managers",
+    "description": "Use the with statement and build your own context managers.",
+    "course": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 9,
+  "fields": {
+    "title": "Metaclasses and Descriptors",
+    "description": "Dive deep into Python internals and advanced class customization.",
+    "course": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 10,
+  "fields": {
+    "title": "Async Programming",
+    "description": "Learn asyncio, coroutines, and concurrent programming patterns.",
+    "course": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 11,
+  "fields": {
+    "title": "Django Setup and Project Structure",
+    "description": "Install Django, create a project, and understand the MVT architecture.",
+    "course": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 12,
+  "fields": {
+    "title": "Models and Databases",
+    "description": "Define models, run migrations, and interact with the ORM.",
+    "course": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 13,
+  "fields": {
+    "title": "Views and URLs",
+    "description": "Create function-based and class-based views with URL routing.",
+    "course": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 14,
+  "fields": {
+    "title": "Templates and Static Files",
+    "description": "Build dynamic HTML pages with Django templates.",
+    "course": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 15,
+  "fields": {
+    "title": "Authentication and Authorization",
+    "description": "Implement user login, registration, and permissions.",
+    "course": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 16,
+  "fields": {
+    "title": "ES6+ Features",
+    "description": "Arrow functions, destructuring, spread operators, and template literals.",
+    "course": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 17,
+  "fields": {
+    "title": "React Fundamentals",
+    "description": "Components, props, state, and JSX syntax.",
+    "course": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 18,
+  "fields": {
+    "title": "React Hooks",
+    "description": "useState, useEffect, useContext, and custom hooks.",
+    "course": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 19,
+  "fields": {
+    "title": "State Management",
+    "description": "Context API, Redux, and Zustand for managing application state.",
+    "course": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 20,
+  "fields": {
+    "title": "Routing and API Integration",
+    "description": "React Router and fetching data from REST APIs.",
+    "course": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 21,
+  "fields": {
+    "title": "Introduction to Pandas",
+    "description": "Series, DataFrames, and basic operations.",
+    "course": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 22,
+  "fields": {
+    "title": "Data Cleaning",
+    "description": "Handle missing values, duplicates, and data type conversions.",
+    "course": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 23,
+  "fields": {
+    "title": "Data Transformation",
+    "description": "Merging, joining, grouping, and pivoting data.",
+    "course": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 24,
+  "fields": {
+    "title": "Time Series Analysis",
+    "description": "Work with datetime indexes, resampling, and rolling windows.",
+    "course": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 25,
+  "fields": {
+    "title": "Data Visualization",
+    "description": "Create charts with Matplotlib and Seaborn from Pandas data.",
+    "course": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 26,
+  "fields": {
+    "title": "ML Fundamentals",
+    "description": "Types of learning, datasets, and the ML workflow.",
+    "course": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 27,
+  "fields": {
+    "title": "Supervised Learning",
+    "description": "Linear regression, logistic regression, and decision trees.",
+    "course": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 28,
+  "fields": {
+    "title": "Unsupervised Learning",
+    "description": "Clustering with K-means and dimensionality reduction with PCA.",
+    "course": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 29,
+  "fields": {
+    "title": "Model Evaluation",
+    "description": "Cross-validation, confusion matrices, and performance metrics.",
+    "course": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 30,
+  "fields": {
+    "title": "Introduction to Neural Networks",
+    "description": "Perceptrons, activation functions, and a simple neural network.",
+    "course": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 31,
+  "fields": {
+    "title": "SQL Basics",
+    "description": "SELECT, WHERE, ORDER BY, and LIMIT clauses.",
+    "course": 7
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 32,
+  "fields": {
+    "title": "Joins and Relationships",
+    "description": "INNER, LEFT, RIGHT, and FULL OUTER joins.",
+    "course": 7
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 33,
+  "fields": {
+    "title": "Subqueries and CTEs",
+    "description": "Write nested queries and common table expressions.",
+    "course": 7
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 34,
+  "fields": {
+    "title": "Indexing and Performance",
+    "description": "Understand indexes and query optimization.",
+    "course": 7
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 35,
+  "fields": {
+    "title": "Database Design",
+    "description": "Normalization, ER diagrams, and schema design principles.",
+    "course": 7
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 36,
+  "fields": {
+    "title": "Dart Programming Basics",
+    "description": "Variables, functions, and object-oriented Dart.",
+    "course": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 37,
+  "fields": {
+    "title": "Flutter Widgets",
+    "description": "Stateless and stateful widgets, layout, and styling.",
+    "course": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 38,
+  "fields": {
+    "title": "Navigation and Routing",
+    "description": "Navigate between screens and pass data.",
+    "course": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 39,
+  "fields": {
+    "title": "State Management",
+    "description": "Provider, Riverpod, and BLoC patterns.",
+    "course": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 40,
+  "fields": {
+    "title": "API Integration",
+    "description": "Fetch and display data from REST APIs.",
+    "course": 8
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 41,
+  "fields": {
+    "title": "Docker Fundamentals",
+    "description": "Images, containers, volumes, and Dockerfiles.",
+    "course": 9
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 42,
+  "fields": {
+    "title": "Docker Compose",
+    "description": "Multi-container applications with docker-compose.",
+    "course": 9
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 43,
+  "fields": {
+    "title": "Kubernetes Basics",
+    "description": "Pods, deployments, services, and kubectl.",
+    "course": 9
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 44,
+  "fields": {
+    "title": "Scaling and Networking",
+    "description": "ReplicaSets, ingress, and service discovery.",
+    "course": 9
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 45,
+  "fields": {
+    "title": "CI/CD Pipelines",
+    "description": "Automate builds and deployments with GitHub Actions.",
+    "course": 9
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 46,
+  "fields": {
+    "title": "Cybersecurity Fundamentals",
+    "description": "CIA triad, threat models, and security principles.",
+    "course": 10
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 47,
+  "fields": {
+    "title": "Reconnaissance and Scanning",
+    "description": "Information gathering with Nmap and OSINT tools.",
+    "course": 10
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 48,
+  "fields": {
+    "title": "Vulnerability Assessment",
+    "description": "Identify and analyze security weaknesses.",
+    "course": 10
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 49,
+  "fields": {
+    "title": "Exploitation Techniques",
+    "description": "Common attack vectors and exploitation frameworks.",
+    "course": 10
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 50,
+  "fields": {
+    "title": "Reporting and Remediation",
+    "description": "Document findings and recommend fixes.",
+    "course": 10
+  }
+}
+]
