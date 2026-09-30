@@ -1,3 +1,5 @@
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -36,3 +38,14 @@ class Module(models.Model):
 
     # Relations
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='modules')
+
+
+class Content(models.Model):
+    object_id = models.PositiveIntegerField()
+
+    # Relations
+    module = models.ForeignKey(Module, on_delete=models.CASCADE, related_name='contents')
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+
+    # Generic Relations
+    item = GenericForeignKey('content_type', 'object_id')
