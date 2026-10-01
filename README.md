@@ -29,7 +29,6 @@
 - [x] Using fixtures to dump and load data into the database
 - [x] Implementing a full-text search engine with Django and PostgreSQL
 
-
 ## bookmark (social)
 
 - [x] Creating a login view
@@ -61,7 +60,6 @@
 - [x] Using Django Debug Toolbar to obtain relevant debug information
 - [x] Counting image views with Redis
 - [x] Creating a ranking of the most viewed images with Redis
-
 
 ## myShop (e-commerce)
 
@@ -96,12 +94,15 @@
 - [ ] Adapting views to use translations
 - [ ] Using the localized form fields of django-localflavor
 
-
 ## E-Learning Platform (educa)
 
-- [ ] Create models for the CMS
-- [ ] Create fixtures for your models and apply them
-- [ ] Use model inheritance to create data models for polymorphic content
-- [ ] Create custom model fields
-- [ ] Order course contents and modules
-- [ ] Build authentication views for the CMS
+- [x] Create models for the CMS
+- [x] Create fixtures for your models and apply them
+- [x] Use model inheritance to create data models for polymorphic content
+- [x] Create custom model fields
+- [x] Order course contents and modules
+- [x] Build authentication views for the CMS
+- [ ] Create a content management system (CMS) using class-based views and mixins
+- [ ] Build formsets and model formsets to edit course modules and module contents
+- [ ] Manage groups and permissions
+- [ ] Implement a drag-and-drop functionality to reorder modules and content
