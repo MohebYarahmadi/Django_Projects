@@ -129,3 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # SHELL_PLUS
 SHELL_PLUS = 'ipython'
+
+# MailHog Localserver
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'  # Or '127.0.0.1'
+EMAIL_PORT = 1025
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = ''      # Not needed for MailHog
+EMAIL_HOST_PASSWORD = ''  # Not needed for MailHog
+DEFAULT_FROM_EMAIL = 'noreply@educa.local'
