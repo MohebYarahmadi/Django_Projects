@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverrse_lazy
+from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import (
@@ -13,7 +13,7 @@ from .models import Course
 class OwnerMixin:
     def get_queryset(self):
         qs = super().get_queryset()
-        return qs.filter(owner=slef.request.user)
+        return qs.filter(owner=self.request.user)
 
 
 class OwnerEditMixin:
@@ -25,14 +25,14 @@ class OwnerEditMixin:
 class OwnerCourseMixin(OwnerMixin, LoginRequiredMixin, PermissionRequiredMixin):
     model = Course
     fields = ['subject', 'title', 'slug', 'overview']
-    success_url = reverrse_lazy('manage-course-list')
+    success_url = reverse_lazy('courses:manage-course-list')
 
 
 class OwnerCourseEditMixin(OwnerCourseMixin, OwnerEditMixin):
     template_name = 'courses/manage/course/form.html'
 
 
-class ManageCourselistView(OwnerCourseMixin, ListView):
+class ManageCourseListView(OwnerCourseMixin, ListView):
     template_name = 'courses/manage/course/list.html'
     permission_required = 'courses.view_course'
 
